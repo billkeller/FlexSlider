@@ -3,7 +3,8 @@
  * Copyright 2012 WooThemes
  * Contributing Author: Tyler Smith
  */
-define([ 'jquery' ], function($) {
+;
+(function ($) {
 
   //FlexSlider: Object Instance
   $.flexslider = function(el, options) {
@@ -887,6 +888,7 @@ define([ 'jquery' ], function($) {
             slider.setProps(sliderOffset * slider.h, "init");
           }, (type === "init") ? 100 : 0);
         } else {
+          slider.newSlides.css({"width": slider.computedW, "float": "left", "display": "block"});
           slider.container.width((slider.count + slider.cloneCount) * 200 + "%");
           slider.setProps(sliderOffset * slider.computedW, "init");
           setTimeout(function(){
@@ -1137,5 +1139,4 @@ define([ 'jquery' ], function($) {
       }
     }
   };
-
-});
+})(jQuery);
