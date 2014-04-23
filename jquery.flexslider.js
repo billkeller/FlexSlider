@@ -3,8 +3,7 @@
  * Copyright 2012 WooThemes
  * Contributing Author: Tyler Smith
  */
-;
-(function ($) {
+define([ 'jquery' ], function($) {
 
   //FlexSlider: Object Instance
   $.flexslider = function(el, options) {
@@ -1138,4 +1137,5 @@
       }
     }
   };
-})(jQuery);
+
+});
